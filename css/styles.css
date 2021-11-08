@@ -1,3 +1,38 @@
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../font/Montserrat-Regular.ttf')
+}
+
+:root {
+  --ff-logo: 'Montserrat', sans-serif;
+}
+
 h1, h2, h3 {
   color: blue;
+}
+
+h1, h2, h3, h4, p {
+  font-family: var(--ff-logo);
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+h4 {
+  font-size: 1rem;
+  margin-bottom: 3px;
+}
+
+p {
+  margin-bottom: 0.15em;
+  line-height: .8;
 }
