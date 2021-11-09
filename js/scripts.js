@@ -1,25 +1,5 @@
 let hidden = ["myHome", "myExperience", "myProjects", "myReferences", "myAbout", "myContact"];
 
-// function toggleHome() {
-//   document.getElementById("myHome").style.display = "block";
-//   for (let i=1; i < (hidden.length -1); i++) {
-//     document.getElementById(hidden[i]).style.display = "none";
-//   }
-// }
-
-// function toggleExperience() {
-//   document.getElementById("myExperience").style.display = "block";
-//   for (let i=0; i < hidden.length; i++) {
-//     if (i == 1) {
-//       continue;
-//     }
-//     document.getElementById(hidden[i]).style.display = "none";
-//   }
-// }
-
-
-
-
 function toggleView(section) {
   document.getElementById(section).style.display = "block";
   editHidden = hidden.filter(item => item !== section);
