@@ -36,3 +36,71 @@ p {
   margin-bottom: 0.15em;
   line-height: .8;
 }
+
+/* navbar styling */
+
+.navbar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+}
+
+.navbar p {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  color: aqua;
+  display: block;
+  transition: 0.3s;
+}
+
+.navbar p:hover {
+  color: blue;
+}
+
+.navbar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 20px;
+}
+
+@media screen and (max-height: 450px) {
+  .navbar {padding-top: 15px;}
+}
+
+/* Hide and Show sections */
+
+#myHome {
+  display: show;
+}
+
+#myExperience{
+  display: none;
+}
+
+#myFeatured-Projects {
+  display: none;
+}
+
+#myReferences {
+  display: none;
+}
+
+#myAbout {
+  display: none;
+}
+
+#myContact {
+  display: none;
+}

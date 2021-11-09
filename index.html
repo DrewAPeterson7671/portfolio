@@ -1,111 +1,121 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
     <title>Drew Peterson</title>
-    <meta name="viewport" content="width=device-width internal-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, internal-scale=1">
     <link rel="stylesheet" href="./css/styles.css">
   </head>
 
   <body>
 
-    <div class="main">
-      <h1>Drew Peterson</h1>
-        <h2>Junior Full Stack Developer</h2>
-          <p>Taking pride in delivered code.</p>
+    <script src="js/scripts.js"></script>
+
+    <p><span onclick="openNav()">></span></p>
+
+    <div id="myNavbar" class="navbar">
+      <p><span onclick="toggleHome()">Home</span></p>
+      <p><span onclick="toggleExperience()">Experience</span></p>
+      <p><span onclick="toggleLink()">Featured Projects</span></p>
+      <p><span onclick="toggleLink()">References</span></p>
+      <p><span onclick="toggleLink()">About</span></p>
+      <p><span onclick="toggleLink()">Contact</span></p>
+      <p href="javascript:void(0)" class="closebtn" onclick="closeNav()"><</a>
     </div>
 
-    <div class="navbar">
-      <p>Home</p>
-      <p>Experience</p>
-      <p>Featured Products</p>
-      <p>References</p>
-      <p>About</p>
-      <p>Contact</p>
-    </div>
+    <div id="main">
+      <div id="myHome" class="home">
+        <h1>Drew Peterson</h1>
+          <h2>Junior Full Stack Developer</h2>
+            <p>Taking pride in delivered code.</p>
+      </div>
 
-    <div class="experience">
-      <h2>Experience</h2>
-        <h3>School</h3>
-          <p>Epicodus Coding Boot Camp Graduated April, 2020</p>
-          <p>Javascript, Ruby on Rails, React</p>
-        <h3>Internship</h3>
-          <p>Goalden Hour March to April, 2020</p>
-          <p>Javascript, MobX</p>
-        <h3>Save Ohno</h3>
-          <p>Full Stack Development August, 2020 to April, 2021</p>
-          <p>Ruby on Rails</p>
-        <h3>Skills</h3>
-          <p>Javascript</p>
-          <p>Ruby on Rails</p>
-          <p>React</p>
-          <p>HTML</p>
-          <p>CSS</p>
-          <p>SCSS</p>
-          <p>PostgreSQL</p>
-          <p>MobX</p>
-          <p>Typescript</p>
-          <p>Redux</p>
-          <p>Heroku</p>
-          <p>AWS</p>
-          <p>Bootstrap</p>
-          <p>Ant Design</p>
-          <p>Ionic Framework</p>
-          <p>Ajax</p>
-        <h3>Soft Skills</h3>
-          <p>Outside Sales</p>
-          <p>Traveling Sales</p>
-          <p>Management</p>
-          <p>Customer Service</p>
-          <p>Public Speaking</p>
-          <p>Software Technical Support</p>
-          <p>Project Management</p>
-        <h3>Resume</h3>
-    </div>  
-      
-    <div class="featured-projects">
-      <h2>Featured Projects</h2>
-        <h3>Marios Specialty Foods</h3>
-          <p>Screenshot</p>
-          <p>Description</p>
-          <p>Technologies</p>
-          <p>Link</p>
-          <p>Github Repo</p>
-        <h3>My Favorite Cocktails</h3>
-          <p>Screenshot</p>
-          <p>Description</p>
-          <p>Technologies</p>
-          <p>Link</p>
-          <p>Github Repo</p>
-    </div>    
 
-    <div class="references">
-      <h2>References</h2>
-        <p>Dylan Husted</p>
-        <p>Karthy Chandra</p>
-        <p>Quentin Prideaux</p>
-    </div>
+      <div id="myExperience" class="experience">
+        <h2>Experience</h2>
+          <h3>School</h3>
+            <p>Epicodus Coding Boot Camp Graduated April, 2020</p>
+            <p>Javascript, Ruby on Rails, React</p>
+          <h3>Internship</h3>
+            <p>Goalden Hour March to April, 2020</p>
+            <p>Javascript, MobX</p>
+          <h3>Save Ohno</h3>
+            <p>Full Stack Development August, 2020 to April, 2021</p>
+            <p>Ruby on Rails</p>
+          <h3>Skills</h3>
+            <p>Javascript</p>
+            <p>Ruby on Rails</p>
+            <p>React</p>
+            <p>HTML</p>
+            <p>CSS</p>
+            <p>SCSS</p>
+            <p>PostgreSQL</p>
+            <p>MobX</p>
+            <p>Typescript</p>
+            <p>Redux</p>
+            <p>Heroku</p>
+            <p>AWS</p>
+            <p>Bootstrap</p>
+            <p>Ant Design</p>
+            <p>Ionic Framework</p>
+            <p>Ajax</p>
+          <h3>Soft Skills</h3>
+            <p>Outside Sales</p>
+            <p>Traveling Sales</p>
+            <p>Management</p>
+            <p>Customer Service</p>
+            <p>Public Speaking</p>
+            <p>Software Technical Support</p>
+            <p>Project Management</p>
+          <h3>Resume</h3>
+      </div>  
+        
+      <div id="myFeatured-Projects" class="featured-projects">
+        <h2>Featured Projects</h2>
+          <h3>Marios Specialty Foods</h3>
+            <p>Screenshot</p>
+            <p>Description</p>
+            <p>Technologies</p>
+            <p>Link</p>
+            <p>Github Repo</p>
+          <h3>My Favorite Cocktails</h3>
+            <p>Screenshot</p>
+            <p>Description</p>
+            <p>Technologies</p>
+            <p>Link</p>
+            <p>Github Repo</p>
+      </div>    
 
-    <div class="about">
-      <h2>About</h2>
-        <p>Photo</p>
-        <p>Who I Am</p>
-        <p>How I got Started</p>
-        <p>Philosophy</p>
-        <p>Interests</p>
-    </div>  
+      <div id="myReferences" class="references">
+        <h2>References</h2>
+          <p>Dylan Husted</p>
+          <p>Karthy Chandra</p>
+          <p>Quentin Prideaux</p>
+      </div>
 
-    <div class="contact">
-      <h2>Contact</h2>
-        <p>Email</p>
+      <div id="myAbout" class="about">
+        <h2>About</h2>
+          <p>Photo</p>
+          <p>Who I Am</p>
+          <p>How I got Started</p>
+          <p>Philosophy</p>
+          <p>Interests</p>
+      </div>  
+
+      <div id="myContact" class="contact">
+        <h2>Contact</h2>
+          <p>Email</p>
+          <p>LinkedIn</p>
+          <p>Github</p>
+      </div>
+
+      <div class='footer'>
         <p>LinkedIn</p>
         <p>Github</p>
+        <p>Email</p>
+      </div>
+
     </div>
 
-    <div class='footer'>
-      <p>LinkedIn</p>
-      <p>Github</p>
-      <p>Email</p>
-    </div>
-  
   </body>
 </html>
