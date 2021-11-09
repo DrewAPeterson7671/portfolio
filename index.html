@@ -9,18 +9,16 @@
 
   <body>
 
-    <script src="js/scripts.js"></script>
-
     <p><span onclick="openNav()">></span></p>
 
     <div id="myNavbar" class="navbar">
-      <p><span onclick="toggleHome()">Home</span></p>
-      <p><span onclick="toggleExperience()">Experience</span></p>
-      <p><span onclick="toggleLink()">Featured Projects</span></p>
-      <p><span onclick="toggleLink()">References</span></p>
-      <p><span onclick="toggleLink()">About</span></p>
-      <p><span onclick="toggleLink()">Contact</span></p>
-      <p href="javascript:void(0)" class="closebtn" onclick="closeNav()"><</a>
+      <a href="#"><span id="home">Home</span></a>
+      <a href="#"><span id="experience">Experience</span></a>
+      <a href="#"><span id="projects">Featured Projects</span></a>
+      <a href="#"><span id="references">References</span></a>
+      <a href="#"><span id="about">About</span></a>
+      <a href="#"><span id="contact">Contact</span></a>
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><</a>
     </div>
 
     <div id="main">
@@ -70,7 +68,7 @@
           <h3>Resume</h3>
       </div>  
         
-      <div id="myFeatured-Projects" class="featured-projects">
+      <div id="myProjects" class="projects">
         <h2>Featured Projects</h2>
           <h3>Marios Specialty Foods</h3>
             <p>Screenshot</p>
@@ -116,6 +114,8 @@
       </div>
 
     </div>
+
+    <script src="js/scripts.js"></script>
 
   </body>
 </html>

@@ -32,7 +32,7 @@ h4 {
   margin-bottom: 3px;
 }
 
-p {
+p, a {
   margin-bottom: 0.15em;
   line-height: .8;
 }
@@ -51,15 +51,16 @@ p {
   transition: 0.5s;
 }
 
-.navbar p {
+.navbar a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   color: aqua;
   display: block;
   transition: 0.3s;
+  word-wrap: initial;
 }
 
-.navbar p:hover {
+.navbar a:hover {
   color: blue;
 }
 
@@ -82,14 +83,14 @@ p {
 /* Hide and Show sections */
 
 #myHome {
-  display: show;
+  display: block;
 }
 
-#myExperience{
+#myExperience {
   display: none;
 }
 
-#myFeatured-Projects {
+#myProjects {
   display: none;
 }
 
