@@ -202,13 +202,16 @@ a:hover {
 .skills-grid {
   display: grid;
   grid-template-columns: 150px 150px 150px 150px;
-  row-gap: 5px;
+}
+
+.skill-item {
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .soft-skills-grid {
   display: grid;
   grid-template-columns: 250px 250px;
-  row-gap: 5px;
 }
 
 
