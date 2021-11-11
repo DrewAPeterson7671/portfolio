@@ -280,6 +280,20 @@ a:hover {
   margin-bottom: 10px;
 }
 
+/* Reference Section */
 
+.references {
+  margin-bottom: 100px;
+}
 
+/* About Section */
 
+.about {
+  margin-bottom: 100px;
+}
+
+/* Contact Section */
+
+.contact {
+  margin-bottom: 100px;
+}
