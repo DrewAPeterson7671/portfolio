@@ -151,7 +151,7 @@ a:hover {
   bottom: 0;
   background-color: #111;
   overflow-x: hidden;
-  /* padding-top: 10px; */
+  margin-top: 10px;
 }
 
 .footer-grid {
@@ -168,6 +168,9 @@ a:hover {
   font-size: 14px;
   margin-top: 5px;
 }
+
+
+
 
 /* Home Section */
 
@@ -212,6 +215,51 @@ a:hover {
 .soft-skills-grid {
   display: grid;
   grid-template-columns: 250px 250px;
+}
+
+/* Project Section */
+
+.projects {
+  margin-bottom: 100px;
+}
+
+.project-card {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 411px 1fr;
+  grid-template-rows: auto;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.project-image {
+  grid-row: 1 / span 4;
+  height: 200px;
+  width: 411px;
+  /* padding: 2px;
+  height: 200px;
+  width: auto; */
+  /* border-radius: 10px; */
+  /* width: a; */
+}
+
+.project-image img {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.project-text {
+  grid-column: 2;
+  align-self: center;
+  /* margin-top: auto;
+  margin-bottom: auto; */
+}
+
+.projects h3 {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 
