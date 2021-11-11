@@ -85,6 +85,8 @@ a:hover {
 }
 
 #main {
+  margin-left: 250px;
+  margin-right: 250px;
   transition: margin-left .5s;
   padding: 20px;
 }
