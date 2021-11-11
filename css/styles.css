@@ -181,6 +181,10 @@ a:hover {
 
 /* Experience Section */
 
+.experience {
+  margin-bottom: 100px;
+}
+
 .experience-grid {
   display: grid;
   grid-template-columns: 100px 1fr;
