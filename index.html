@@ -4,21 +4,26 @@
     <title>Drew Peterson</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, internal-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/styles.css">
   </head>
 
   <body>
 
-    <a href="#"><span onclick="openNav()">></span></a>
+    <a href="javascript:void(0)" onclick="openNav()"><span class="open-nav-shade">&nbsp > &nbsp</span></a>
+
+    <a href="javascript:void(0);" class="icon" onclick="responsiveNav()">
+      <i class="fa fa-bars"></i>
+    </a>
 
     <div id="myNavbar" class="navbar">
-      <a href="#"><span id="home">Home</span></a>
-      <a href="#"><span id="experience">Experience</span></a>
-      <a href="#"><span id="projects">Featured Projects</span></a>
-      <a href="#"><span id="references">References</span></a>
-      <a href="#"><span id="about">About</span></a>
-      <a href="#"><span id="contact">Contact</span></a>
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><</a>
+      <a href="#" class="navItem"><span id="home">Home</span></a>
+      <a href="#" class="navItem"><span id="experience">Experience</span></a>
+      <a href="#" class="navItem"><span id="projects">Projects</span></a>
+      <a href="#" class="navItem"><span id="references">References</span></a>
+      <a href="#" class="navItem"><span id="about">About</span></a>
+      <a href="#" class="navItem"><span id="contact">Contact</span></a>
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><span class="open-nav-shade">&nbsp < &nbsp</span></a>
     </div>
 
     <div id="main">
@@ -141,14 +146,17 @@
         <h2>About</h2>
           <h3>How I Got Started</h3>
             <p>My enthusiasm to code started in high school.  I remember pulling up to a stop light in my car and thinking "If weight sensor equals '> 500lbs', then...".  Learning code changed how I thought about everything.</p>
-            <p>In the mid-2000s, I played a sports simulation game (Fast Break Basketball!) that is a spreadsheet sports game.  I loved it so much, I had to run my own league, my way!  I made the webpages in Dreamweaver and found an inexpensive hosting service.  It thrived!  But I wanted to take it further, correct everything wrong with it.  And make it web based!  Why not?  So I made some HTML pages ("What are all these .css files cluttering everything up?" "What are these 'div' tags all over this example page?  They don't do anything...  ").  So to make a league, I have to make forms to create leagues and teams and players.  No Problem.  ("Huh...  When I hit 'submit', it isn't... retaining the data..." There must be more going on under the surface, something I haven't seen.").  Then I downloaded MySQL (Soooo...... How does this form connect to it...).</p>
-            <p>In 2018 I met a person who managed a coding bootcamp.  I was at </p>
+            <p>In the mid-2000s, I played a sports simulation game (Fast Break Basketball!) that is a spreadsheet sports game.  I loved it so much, I had to run my own league, my way!  I made the webpages in Dreamweaver and found an inexpensive hosting service.  It thrived!  But I wanted to take it further, correct everything wrong with it.  And make it web based!  Why not?  So I made some HTML pages ("What are all these .css files cluttering everything up?" "What are these 'div' tags all over this example page?  They don't do anything...  ").  So to make a league, I have to make forms to create leagues and teams and players.  No Problem.  ("Huh...  When I hit 'submit', it isn't... retaining the data..." There must be more going on under the surface, something I haven't seen.").  Then I downloaded MySQL (Soooo...... How does this form... connect to it...?).</p>
+            <p>In 2018, I was driving for Lyft and had an intereting passenger. The passenger managed a coding bootcamp.  Thought I had to get a 4 year degree to pursue that (while simultaneously paying the bills of a North American adult). This had to be done.  This was it!  I shaped every aspect of my life make it so.  Sacrifices were made and many more will have to be made in my pursuit of this career as a developer.</p>  
+            <p>All I have to do is keep coding! My victory is inevitable.</p>
           <h3>Life Before Code</h3>
-            <p>Photo</p>
+            <p>Electronic CAD.  Management.  Outside sales of electronics in the Silicon Valley.  Creation a software department in a hardware corporation.  Traveling sales.  Lyft Driver. Lived in 5 states.  Business Travel to 16 states.</p>
           <h3>Philosophy</h3>
-            <p>Photo</p>
+            <p>Flexibility - Travelling sales taught me how to manage business in an environment of pure chaos.  It can be brought to order, but it is only ever done as a daily, on-going process.  A person must be practical and flexible.  They must quickly discern the importance and urgency the incoming items and systematically adapt to it.  Every day.</p>
+            <p>Persistence - Cold calling taught me the value of persistence.  All face to face sales people despise cold calling and most go to great lengths to not do it.  I learned to dive into it, embrace it, make it your strength.  Throw yourself into everything, especially the difficult and distastefull, and you will succeed.</p>
+            <p>Pragmatism - With long exposure to executive staff and entrepeneurs, both as employers and as customers, a person begins to see how business problems and situations must be prioritized and engaged. Keep the lights on.  Do what must be done to deliver on time.  Never throw good money after bad.  If you wait until a product is absolute perfection before release, someone will beat you to market by 2 years.</p>
           <h3>Interests</h3>
-            <p>Photo</p>
+            <p>My very favorite pastimes are hiking, going for walks, coloring and shopping with my sweet baby, NBA basketball (I must read every single box score, every day), and obsessively exploring music on Spotify. The secret of the universe is Lays Dill Pickle Chips.  It's true.</p> 
       </div>  
 
       <div id="myContact" class="contact">

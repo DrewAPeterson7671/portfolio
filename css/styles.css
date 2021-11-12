@@ -62,9 +62,18 @@ a:hover {
   text-align: center;
 }
 
-
+#main {
+  margin-left: 150px;
+  margin-right: 150px;
+  transition: margin-left .5s;
+  padding: 20px;
+}
 
 /* navbar styling */
+
+.open-nav-shade {
+  background-color: var(--color-headers);
+}
 
 .navbar {
   height: 100%;
@@ -79,30 +88,60 @@ a:hover {
 }
 
 .navbar a {
-  padding: 8px 8px 8px 32px;
+  padding: 8px 8px 8px 20px;
   display: block;
   transition: 0.3s;
   white-space: nowrap;
 }
 
-
-
 .navbar .closebtn {
   position: absolute;
   top: 0;
-  right: 25px;
-  margin-left: 50px;
-}
-
-#main {
-  margin-left: 250px;
-  margin-right: 250px;
-  transition: margin-left .5s;
-  padding: 20px;
+  right: -10px;
+  margin-left: 30px;
 }
 
 @media screen and (max-height: 450px) {
   .navbar {padding-top: 15px;}
+}
+
+.icon {
+  display: none;
+  position: absolute;
+  z-index: 2;
+  /* top: 0; */
+  margin-top: 10px;
+  margin-left: 10px;
+  /* float: left; */
+  font-size: 30px;
+  padding: 8px 0px 5px 15px;
+  width: 40px;
+  height: 40px;
+  border: 1px;
+  border-radius: 2px;
+  border-style: solid;
+}
+
+/* .responsiveNav {
+  margin-top: 60px;
+} */
+
+@media screen and (max-width: 600px) {
+  .navbar a { 
+    display: none; 
+  }
+  .closebtn {
+    display: none;
+  }
+  .open-nav-shade {
+    display: none;
+  }
+  #myNavbar {
+    width: 0px;
+  }
+  .icon {
+    display: block;
+  }
 }
 
 /* Hide and Show sections */
