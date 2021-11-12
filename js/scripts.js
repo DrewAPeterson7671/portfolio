@@ -5,7 +5,6 @@ function toggleView(section) {
   editHidden = hidden.filter(item => item !== section);
   console.log(editHidden);
   editHidden.forEach( i => {
-    console.log(i);
     document.getElementById(i).style.display = "none";
   });
 }
@@ -30,7 +29,7 @@ contact.addEventListener("click", () => { toggleView("myContact"); }, false);
 
 
 function openNav() {
-  document.getElementById("myNavbar").style.width = "150px";
+  document.getElementById("myNavbar").style.width = "155px";
   // document.getElementById("main").style.marginLeft = "250px";
 }
 
@@ -40,31 +39,14 @@ function closeNav() {
 }
 
 function responsiveNav() {
-  document.getElementById("myNavbar").style.width = "150px"
-  document.getElementByClass("navItem").style.display = "block";
-  // let x = document.getElementById("myNavbar");
-  // if (x.className === "myNavbar") {
-  //   x.className += " responsiveNav";
-  //   openNav();
-  // } else {
-  //   x.className = "myNavbar";
-  //   closeNav();
-  // }
+  let menuStateCheck = document.getElementById("myNavbar");
+  if (menuStateCheck.style.width == "155px") {
+    closeNav();
+  } else {
+    openNav();
+  }
 }
 
-// function navTooBig(navWatch) {
-//   if (navWatch.matches) {
-//     let x = document.getElementById("myNavbar");
-//     // if (x.className === "myNavbar") {
-//     //   x.className += " responsiveNav";
-//     // } else {
-//     //   x.className = "myNavbar";
-//     // }
-//     closeNav();
-//   }
-// }
 
-// let navWatch = window.matchMedia("(max-width:600px)");
-// navTooBig(navWatch);
-// navWatch.addEventListener(navTooBig);
+
 
