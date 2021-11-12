@@ -30,7 +30,7 @@ contact.addEventListener("click", () => { toggleView("myContact"); }, false);
 
 
 function openNav() {
-  document.getElementById("myNavbar").style.width = "250px";
+  document.getElementById("myNavbar").style.width = "150px";
   // document.getElementById("main").style.marginLeft = "250px";
 }
 
@@ -38,3 +38,33 @@ function closeNav() {
   document.getElementById("myNavbar").style.width = "0";
   // document.getElementById("main").style.marginLeft = "0";
 }
+
+function responsiveNav() {
+  document.getElementById("myNavbar").style.width = "150px"
+  document.getElementByClass("navItem").style.display = "block";
+  // let x = document.getElementById("myNavbar");
+  // if (x.className === "myNavbar") {
+  //   x.className += " responsiveNav";
+  //   openNav();
+  // } else {
+  //   x.className = "myNavbar";
+  //   closeNav();
+  // }
+}
+
+// function navTooBig(navWatch) {
+//   if (navWatch.matches) {
+//     let x = document.getElementById("myNavbar");
+//     // if (x.className === "myNavbar") {
+//     //   x.className += " responsiveNav";
+//     // } else {
+//     //   x.className = "myNavbar";
+//     // }
+//     closeNav();
+//   }
+// }
+
+// let navWatch = window.matchMedia("(max-width:600px)");
+// navTooBig(navWatch);
+// navWatch.addEventListener(navTooBig);
+
