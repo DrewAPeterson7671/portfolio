@@ -27,25 +27,36 @@ h1, h2, h3, h4, p, a {
 
 h1 {
   font-size: 3rem;
+  text-shadow: 2px 2px 5px rgba(186, 213, 247, 0.336);
+  /* text-shadow: 
+  0px 0px 5px rgba(186, 213, 247, 0.336),
+  5px 5px 5px rgba(186, 213, 247, 0.670),
+  -5px 5px 5px rgba(186, 213, 247, 0.670); */
+
+
 }
 
 h2 {
   text-align: center;
   font-size: 1.5rem;
+  text-shadow: 1px 1px 3px rgba(186, 213, 247, 0.336);
 }
 
 h3 {
   font-size: 1.2rem;
+  text-shadow: 1px 1px 2px rgba(186, 213, 247, 0.336);
 }
 
 h4 {
   font-size: .8rem;
+  /* text-shadow: 1px 1px 2px rgba(186, 213, 247, 0.336); */
 }
 
-p, a {
+p {
   /* margin-bottom: 0.15em; */
   /* line-height: .8; */
   color: var(--color-text);
+  /* text-shadow: 1px 1px 2px rgba(186, 213, 247, 0.336); */
 }
 
 a {
@@ -236,9 +247,27 @@ a:hover {
 
 /* Home Section */
 
+.home {
+  margin-bottom: 100px;
+}
+
+.home img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  /* border-radius: 50%; */
+  margin-top: -40px;
+  /* border: 5px;
+  border-style: solid;
+  border-color: rgba(186, 213, 247, 0.336); */
+}
+
+
 .home-position {
   position: relative;
-  margin-top: 300px;
+  margin-top: -200px;
+  /* z-index: 2; */
 }
 
 /* Experience Section */
@@ -307,6 +336,7 @@ a:hover {
   column-gap: 10px;
   padding: 5px;
   margin-bottom: 50px;
+  margin-left: 20px;
   /* border: 1px;
   border-style: solid;
   border-color: var(--color-headers);
@@ -358,6 +388,10 @@ a:hover {
   margin-right: 20px;
 }
 
+.closer-lines-40 {
+  margin-top: -40px;
+}
+
 .closer-lines-20 {
   margin-top: -20px;
 }
@@ -370,6 +404,13 @@ a:hover {
 
 .about {
   margin-bottom: 100px;
+}
+
+.about img {
+  display: block;
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Contact Section */
