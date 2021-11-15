@@ -140,13 +140,11 @@ a:hover {
   /* .navItem {
     display: none; 
   } */
-  #myNavbar {
-    width: 0;
-  }
+
   .navbar {
     transition: 0s;
   }
-
+  
   .closebtn {
     display: none;
   }
@@ -255,6 +253,7 @@ a:hover {
   grid-template-columns: 100px 1fr;
   align-items: center;
   height: min-content;
+  margin-left: 20px;
 }
 
 .experience-image {
@@ -274,6 +273,7 @@ a:hover {
 .skills-grid {
   display: grid;
   grid-template-columns: 150px 150px 150px 150px;
+  margin-left: 20px;
 }
 
 .skill-item {
@@ -284,6 +284,11 @@ a:hover {
 .soft-skills-grid {
   display: grid;
   grid-template-columns: 250px 250px;
+  margin-left: 20px;
+}
+
+.experience a {
+  margin-left: 20px;
 }
 
 /* Project Section */
@@ -295,16 +300,23 @@ a:hover {
 .project-card {
   width: 100%;
   min-width: min-content;
+  max-width: 720px;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
   align-items: center;
   column-gap: 10px;
   padding: 5px;
-  border: 1px;
+  margin-bottom: 50px;
+  /* border: 1px;
   border-style: solid;
   border-color: var(--color-headers);
-  border-radius: 10px;
+  border-radius: 10px; */
+}
+
+.project-text {
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .project-image {
@@ -315,9 +327,7 @@ a:hover {
 .project-image img {
   height: 100%;
   width: 100%;
-  /* border-radius: 10px; */
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-radius: 10px;
 }
 
 /* .project-text {
@@ -337,6 +347,11 @@ a:hover {
 
 .references {
   margin-bottom: 100px;
+}
+
+.references p {
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 /* About Section */
