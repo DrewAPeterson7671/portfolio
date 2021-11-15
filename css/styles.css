@@ -17,7 +17,7 @@ body {
   background: var(--color-background);
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
   color: var(--color-headers);
 }
 
@@ -39,8 +39,7 @@ h3 {
 }
 
 h4 {
-  font-size: 1rem;
-  margin-bottom: 3px;
+  font-size: .8rem;
 }
 
 p, a {
@@ -349,9 +348,22 @@ a:hover {
   margin-bottom: 100px;
 }
 
+.references h4 {
+  margin-top: -20px;
+  /* margin-left: 5px; */
+}
+
 .references p {
   margin-left: 20px;
   margin-right: 20px;
+}
+
+.closer-lines-20 {
+  margin-top: -20px;
+}
+
+.closer-lines-5 {
+  margin-top: -5px;
 }
 
 /* About Section */
