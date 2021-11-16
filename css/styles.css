@@ -253,22 +253,50 @@ a:hover {
 
 .home img {
   display: block;
+  margin: auto;
+  /* margin-top: auto;
+  margin-bottom: auto;
   margin-left: auto;
-  margin-right: auto;
+  margin-right: auto; */
+  /* width: 70vw; */
+  /* height: 95vh; */
+  /* height: 60%; */
+  /* height: fit-content; */
+  /* max-width: 100%; */
+  /* height: auto; */
   width: 100%;
-  max-width: 880px;
+  max-width: 975px;
+  max-height: 567.9px;
+  /* height: 100%; */
+  /* object-fit: fill; */
+  /* height: 60%; */
+  /* max-width: 880px; */
   /* border-radius: 50%; */
-  margin-top: -40px;
+  /* margin-top: -80px; */
   /* border: 5px;
   border-style: solid;
   border-color: rgba(186, 213, 247, 0.336); */
 }
 
-
 .home-position {
-  position: relative;
-  margin-top: -40px;
-  /* z-index: 2; */
+  /* position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  bottom: 170px;
+  top: -150px; */
+
+  position: absolute;
+  display: block;
+  top: 60%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  /* object-fit: cover; */
+  /* padding-bottom: 100px; */
+
+
 }
 
 /* Experience Section */
