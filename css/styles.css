@@ -354,6 +354,10 @@ a:hover {
   margin-left: 20px;
 }
 
+.resume {
+  margin-left: 20px;
+}
+
 /* .experience a {
   margin-left: 20px;
 } */
@@ -365,12 +369,15 @@ a:hover {
 }
 
 .project-card {
-  width: 100%;
-  min-width: min-content;
-  max-width: 720px;
+  /* width: 100%; */
+  margin-left: auto;
+  margin-right: auto;
+  /* min-width: min-content; */
+  /* max-width: 720px; */
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
+  justify-content: center;
   align-items: center;
   column-gap: 10px;
   padding: 5px;
