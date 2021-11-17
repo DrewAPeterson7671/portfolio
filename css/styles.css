@@ -9,6 +9,7 @@
   --color-background: #080808;
   --color-nav-link: aqua;
   --color-text: white;
+  --color-shadow: rgba(186, 213, 247, 0.336);
 }
 
 /* General Formatting */
@@ -27,9 +28,9 @@ h1, h2, h3, h4, p, a {
 
 h1 {
   font-size: 3rem;
-  text-shadow: 3px 3px 5px rgba(186, 213, 247, 0.336);
+  text-shadow: 3px 3px 5px var(--color-shadow);
   /* text-shadow: 
-  0px 0px 5px rgba(186, 213, 247, 0.336),
+  0px 0px 5px var(--color-shadow),
   5px 5px 5px rgba(186, 213, 247, 0.670),
   -5px 5px 5px rgba(186, 213, 247, 0.670); */
 
@@ -39,24 +40,24 @@ h1 {
 h2 {
   text-align: center;
   font-size: 1.5rem;
-  text-shadow: 1px 1px 3px rgba(186, 213, 247, 0.336);
+  text-shadow: 1px 1px 3px var(--color-shadow);
 }
 
 h3 {
   font-size: 1.2rem;
-  text-shadow: 1px 1px 2px rgba(186, 213, 247, 0.336);
+  text-shadow: 1px 1px 2px var(--color-shadow);
 }
 
 h4 {
   font-size: .8rem;
-  /* text-shadow: 1px 1px 2px rgba(186, 213, 247, 0.336); */
+  /* text-shadow: 1px 1px 2px var(--color-shadow); */
 }
 
 p {
   /* margin-bottom: 0.15em; */
   /* line-height: .8; */
   color: var(--color-text);
-  /* text-shadow: 1px 1px 2px rgba(186, 213, 247, 0.336); */
+  /* text-shadow: 1px 1px 2px var(--color-shadow); */
 }
 
 a {
@@ -85,6 +86,10 @@ a:hover {
   background-color: var(--color-headers);
 }
 
+.open-nav-shade:hover {
+  color: var(--color-background);
+}
+
 .navbar {
   height: 100%;
   width: 0;
@@ -97,18 +102,18 @@ a:hover {
   transition: 0.5s;
 }
 
-/* .navbar a {
-  padding: 8px 8px 8px 20px;
-  display: block;
-  transition: 0.3s;
-  white-space: nowrap;
-} */
-
 .navItem {
   padding: 8px 8px 8px 20px;
   display: block;
   transition: 0.3s;
   white-space: nowrap;
+}
+
+.openbtn {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  /* margin-left: 30px; */
 }
 
 .closebtn {
@@ -275,7 +280,7 @@ a:hover {
   /* margin-top: -80px; */
   /* border: 5px;
   border-style: solid;
-  border-color: rgba(186, 213, 247, 0.336); */
+  border-color: var(--color-shadow); */
 }
 
 .home-position {
