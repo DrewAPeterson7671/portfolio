@@ -110,7 +110,7 @@ a:hover {
 }
 
 .openbtn {
-  position: absolute;
+  position: fixed;
   top: 8px;
   left: 8px;
   /* margin-left: 30px; */
