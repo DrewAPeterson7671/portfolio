@@ -30,10 +30,18 @@ contact.addEventListener("click", () => { toggleView("myContact"); }, false);
 
 function openNav() {
   document.getElementById("myNavbar").style.width = "155px";
+  document.getElementById("closeBtn").style.display = "block";
+  // document.getElementById("closeBtn").style.backgroundColor = "#080808";
+  // document.getElementById("closeBtn").style.backgroundColor = "#080808";
+  document.getElementById("openBtn").style.display = "none";
 }
 
 function closeNav() {
   document.getElementById("myNavbar").style.width = "0";
+  document.getElementById("closeBtn").style.display = "none";
+  // document.getElementById("closeBtn").style.backgroundColor = "blue";
+  // document.getElementById("closeBtn").style.backgroundColor = "aqua";
+  document.getElementById("openBtn").style.display = "block";
 }
 
 function responsiveNav() {
