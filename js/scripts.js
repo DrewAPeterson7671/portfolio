@@ -5,7 +5,6 @@ let menuMargin = "155px";
 function toggleView(section) {
   document.getElementById(section).style.display = "block";
   editHidden = hidden.filter(item => item !== section);
-  console.log(editHidden);
   editHidden.forEach( i => {
     document.getElementById(i).style.display = "none";
   });
@@ -63,6 +62,22 @@ function mediaMenu(screenWidth760) {
 let screenWidth760 = window.matchMedia("(max-width: 760px)");
 mediaMenu(screenWidth760);
 screenWidth760.addListener(mediaMenu);
+
+const mobileIcon = document.querySelector(".mobile-icon");
+const mobileNav = document.querySelector(".navbar");
+
+mobileIcon.addEventListener("click", mobileMenu);
+
+function mobileMenu() {
+  // console.log("click");
+  mobileIcon.classList.toggle("active");
+  mobileNav.classList.toggle("active");
+}
+
+// const mobileLink = document.querySelector(".navItem");
+
+// mobileLink.forEach(n => n.addEventListener("click"))
+
 
 // let mqls = [
 //   window.matchMedia("(max-width: 860px)"),
