@@ -76,8 +76,8 @@ a:hover {
 #main {
   margin-left: 150px;
   margin-right: 150px;
-  transition: margin-left .5s;
-  padding: 20px;
+  /* transition: margin-left .5s; */
+  padding: 20px 5px 20px 5px;
 }
 
 /* navbar styling */
@@ -119,8 +119,8 @@ a:hover {
 .closebtn {
   position: absolute;
   top: 8px;
-  right: 0px;
-  margin-left: 30px;
+  right: 15px;
+  margin-left: 15px;
 }
 
 /* @media screen and (max-height: 450px) {
@@ -148,13 +148,32 @@ a:hover {
   margin-top: 60px;
 } */
 
-@media screen and (max-width: 600px) {
+/* @media screen and (max-width: 950px) {
+  #main {
+    margin-right: 100px;
+    margin-left: 100px;
+  }
+  .closebtn {
+    margin-left: 20px;
+  }
+} */
+
+@media screen and (max-width: 760px) {
   /* .navbar a { 
     display: none; 
   } */
   /* .navItem {
     display: none; 
   } */
+
+  #main {
+    /* padding-top: 50px; */
+    margin-top: 70px;
+    margin-left: 5px;
+    margin-right: 5px;
+    /* transition: margin-left .5s; */
+    padding: 10px;
+  }
 
   .navbar {
     transition: 0s;
@@ -168,6 +187,7 @@ a:hover {
   }
   .icon {
     display: block;
+    top: 10px;
   }
 }
 
@@ -257,7 +277,11 @@ a:hover {
 }
 
 .home img {
-  display: block;
+  position: static;
+  /* top: 25%; */
+  transform: translateY(15%);
+  /* display: inline-block;
+  vertical-align: middle; */
   margin: auto;
   /* margin-top: auto;
   margin-bottom: auto;
@@ -270,8 +294,11 @@ a:hover {
   /* max-width: 100%; */
   /* height: auto; */
   width: 100%;
+  /* height: 100%; */
   max-width: 975px;
-  max-height: 567.9px;
+  /* max-height: 567.9px; */
+  /* min-width: 510px; */
+  /* min-height: 357.817px; */
   /* height: 100%; */
   /* object-fit: fill; */
   /* height: 60%; */
@@ -511,6 +538,19 @@ a:hover {
   width: 400px;
   /* margin-left: auto;
   margin-right: auto; */
+}
+
+@media screen and (max-width: 890px) {
+  .about img {
+    /* position: absolute; */
+    float: none;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .about-overflow {
+    overflow: unset;
+  }
 }
 
 /* Contact Section */

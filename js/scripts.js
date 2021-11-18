@@ -1,5 +1,7 @@
 let hidden = ["myHome", "myExperience", "myProjects", "myReferences", "myAbout", "myContact"];
 
+let menuMargin = "155px";
+
 function toggleView(section) {
   document.getElementById(section).style.display = "block";
   editHidden = hidden.filter(item => item !== section);
@@ -29,18 +31,14 @@ contact.addEventListener("click", () => { toggleView("myContact"); }, false);
 
 
 function openNav() {
-  document.getElementById("myNavbar").style.width = "155px";
+  document.getElementById("myNavbar").style.width = menuMargin;
   document.getElementById("closeBtn").style.display = "block";
-  // document.getElementById("closeBtn").style.backgroundColor = "#080808";
-  // document.getElementById("closeBtn").style.backgroundColor = "#080808";
   document.getElementById("openBtn").style.display = "none";
 }
 
 function closeNav() {
   document.getElementById("myNavbar").style.width = "0";
   document.getElementById("closeBtn").style.display = "none";
-  // document.getElementById("closeBtn").style.backgroundColor = "blue";
-  // document.getElementById("closeBtn").style.backgroundColor = "aqua";
   document.getElementById("openBtn").style.display = "block";
 }
 
@@ -53,6 +51,45 @@ function responsiveNav() {
   }
 }
 
+function mediaMenu(screenWidth760) {
+  let menuStateCheck = document.getElementById("myNavbar");
+  if (screenWidth760.matches) {
+    if (menuStateCheck.style.width == "155px") {
+      closeNav();
+    }
+  }
+}
 
+let screenWidth760 = window.matchMedia("(max-width: 760px)");
+mediaMenu(screenWidth760);
+screenWidth760.addListener(mediaMenu);
 
+// let mqls = [
+//   window.matchMedia("(max-width: 860px)"),
+//   window.matchMedia("(max-width: 600px)")
+// ]
 
+// function mediaQueryResponse(mql) {
+//   if (mqls[0].matches) {
+//     console.log("860");
+//     let menuStateCheck = document.getElementById("myNavbar");
+//     menuMargin = "105px";
+//     if (menuStateCheck.style.width == "155px") {
+//       document.getElementById("myNavbar").style.width = menuMargin;
+//     } else {
+//       menuMargin = "105px";
+
+//     }
+//     if (mqls[1].matches) {
+//       console.log("600");
+//       if (menuStateCheck.style.width == "155px") {
+//         closeNav();
+//       }
+//     }  
+//   }
+// }
+
+// for (var i = 0; i < mqls.length; i++) {
+//   mediaQueryResponse(mqls[i]);
+//   mqls[i].addListener(mediaQueryResponse)
+// }
