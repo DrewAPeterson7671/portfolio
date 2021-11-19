@@ -11,22 +11,40 @@ function toggleView(section) {
 }
 
 const home = document.getElementById("home");
-home.addEventListener("click", () => { toggleView("myHome"); }, false);
+home.addEventListener("click", () => { 
+  toggleView("myHome");
+  closeMobile();
+}, false);
 
 const experience = document.getElementById("experience");
-experience.addEventListener("click", () => { toggleView("myExperience"); }, false);
+experience.addEventListener("click", () => { 
+  toggleView("myExperience");
+  closeMobile();
+ }, false);
 
 const myProjects = document.getElementById("projects");
-myProjects.addEventListener("click", () => { toggleView("myProjects"); }, false);
+myProjects.addEventListener("click", () => { 
+  toggleView("myProjects");
+  closeMobile();
+}, false);
 
 const references = document.getElementById("references");
-references.addEventListener("click", () => { toggleView("myReferences"); }, false);
+references.addEventListener("click", () => { 
+  toggleView("myReferences");
+  closeMobile();
+}, false);
 
 const about = document.getElementById("about");
-about.addEventListener("click", () => { toggleView("myAbout"); }, false)
+about.addEventListener("click", () => { 
+  toggleView("myAbout");
+  closeMobile();
+}, false)
 
 const contact = document.getElementById("contact");
-contact.addEventListener("click", () => { toggleView("myContact"); }, false);
+contact.addEventListener("click", () => { 
+  toggleView("myContact");
+  closeMobile();
+}, false);
 
 
 // Regular Navbar Hide and Show
@@ -67,9 +85,28 @@ function closeNav() {
 
 const mobileNav = document.querySelector("#myNavbar");
   
-  function mobileMenu() {
-    mobileNav.classList.toggle("active-mobile");
+function mobileMenu() {
+  mobileNav.classList.toggle("active-mobile");
+}
+
+function closeMobile() {
+  if (mobileNav.classList.contains("active-mobile")) {
+    mobileNav.classList.remove("active-mobile");
   }
+}
+
+// This bit is not working to close menu after select I think the key is to adapt it to existing links
+
+// const mobileLink = document.querySelector(".navItem");
+
+// mobileLink.forEach(n => n.addEventListener("click", closeMenu));
+
+// function closeMenu() {
+//   mobileNav.classList.remove("active-mobile");
+// }
+
+
+
 
 // Media Query Section
 
@@ -86,15 +123,14 @@ function handleMediaChange(mediaQuery) {
     }
     if (!openBtn.classList.contains("mobile-navbar")) { 
       mobileNav.classList.add("mobile-navbar");
+      // mobileLink.forEach(n => n.addEventListener("click", closeMenu));
     }
   // }
   } else {
     if (mobileNav.classList.contains("mobile-navbar")) { 
       mobileNav.classList.remove("mobile-navbar");
     }
-    if (mobileNav.classList.contains("active-mobile")) {
-      mobileNav.classList.remove("active-mobile");
-    }
+    closeMobile()
     // if (openBtn.className !== "activeopen") { 
     //   openBtn.classList.add("activeopen");
     // }
