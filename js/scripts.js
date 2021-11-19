@@ -36,15 +36,31 @@ const closeBtn = document.querySelector(".closebtn");
 const openBtn = document.querySelector(".openbtn");
 
 function openNav() {
-  mainNav.classList.toggle("active")
-  closeBtn.classList.toggle("activeclose")
-  openBtn.classList.toggle("activeopen")
+  console.log("click");
+  if (!mainNav.classList.contains("active")) {
+    mainNav.classList.add("active");
+  }
+  if (openBtn.classList.contains("activeopen")) {
+    openBtn.classList.remove("activeopen");
+  }
+  if (!closeBtn.classList.contains("activeclose")) {
+    closeBtn.classList.add("activeclose");
+  }
 }
 
 function closeNav() {
-  mainNav.classList.toggle("active")
-  closeBtn.classList.toggle("activeclose")
-  openBtn.classList.toggle("activeopen")
+  console.log("click");
+  if (mainNav.classList.contains("active")) {
+    mainNav.classList.remove("active");
+  }
+  if (openBtn.classList.contains("activeopen")) {
+    openBtn.classList.remove("activeopen");
+  }
+  if (closeBtn.classList.contains("activeclose")) {
+    closeBtn.classList.remove("activeclose");
+  }
+  // closeBtn.classList.toggle("activeclose");
+  // openBtn.classList.toggle("activeopen");
 }
 
 // Responsive Changes
@@ -68,15 +84,23 @@ function handleMediaChange(mediaQuery) {
     if (openBtn.classList.contains("activeclose")) { 
       closeBtn.classList.remove("activeclose")
     }
-    if (openBtn.className !== "mobile-navbar") { 
+    if (!openBtn.classList.contains("mobile-navbar")) { 
       mobileNav.classList.add("mobile-navbar");
     }
+  // }
   } else {
-    // openBtn.classList.add("activeopen");
-    // closeBtn.classList.remove("activeclose")
-    if (openBtn.classList.contains("activeclose")) { 
-      mobileNav.classList.remove("activeclose");
+    if (mobileNav.classList.contains("mobile-navbar")) { 
+      mobileNav.classList.remove("mobile-navbar");
     }
+    if (mobileNav.classList.contains("active-mobile")) {
+      mobileNav.classList.remove("active-mobile");
+    }
+    // if (openBtn.className !== "activeopen") { 
+    //   openBtn.classList.add("activeopen");
+    // }
+    // closeBtn.classList.remove("activeclose")
+    // if (openBtn.classList.contains("activeclose")) { 
+    //   mobileNav.classList.remove("activeclose");
   }
 
   // THESE are for reversing when back to big screen

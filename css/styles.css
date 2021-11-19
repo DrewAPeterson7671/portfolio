@@ -80,6 +80,7 @@ a:hover {
 }
 
 .navbar {
+  display: block;
   height: 100%;
   width: 0;
   position: fixed;
@@ -88,11 +89,16 @@ a:hover {
   background-color: var(--color-background);
   overflow-x: hidden;
   padding-top: 80px;
-  transition: 0.5s;
+  /* -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; */
 }
+
+/* Transition problem is based here in navbar.  Partially solved by moving to .navbar.active */
 
 .navbar.active {
   width: 145px;
+  /* -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; */
 }
 
 .navItem {
@@ -107,8 +113,6 @@ a:hover {
   position: fixed;
   top: 8px;
   left: 8px;
-  /* transition-delay: 0s; */
-  /* transition: none; */
 }
 
 .openbtn.activeopen {
@@ -121,8 +125,6 @@ a:hover {
   top: 8px;
   right: 0px;
   margin-left: 15px;
-  /* transition-delay: 0s; */
-  /* transition: none; */
 }
 
 .closebtn.activeclose {
@@ -131,29 +133,6 @@ a:hover {
 
 .mobile-navbar {
   display: none;
-  left: -100%;
-  top: 2rem;
-  background-color: var(--color-background);
-  width: 100%;
-  height: 33%;
-  border-radius: 10px;
-  text-align: center;
-  transition: 0.3s;
-  box-shadow: 0 10px 27px var(--color-shadow);
-  padding-top: 10px;
-  /* padding-bottom: 20px; */
-  /* opacity: 0.3; */
-
-  /* height: 100%;
-  width: 0;
-  z-index: 1;
-  overflow-x: hidden;
-  padding-top: 80px; */
-
-}
-
-.mobile-navbar.active-mobile {
-  left: 0;
 }
 
 .mobile-icon {
@@ -180,6 +159,14 @@ a:hover {
     padding: 10px;
   }
 
+  /* .navbar {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -o-transition: none !important;
+    -ms-transition: none !important;
+    transition: none !important;
+  } */
+
   .mobilebar {
     position: fixed;
     width: 100%;
@@ -192,6 +179,16 @@ a:hover {
 
   .mobile-navbar {
     display: block;
+    transition: 0.3s;
+    left: -100%;
+    top: 2rem;
+    background-color: var(--color-background);
+    width: 100%;
+    height: 33%;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 10px 27px var(--color-shadow);
+    padding-top: 10px;
   }
 
   #myNavbar.active-mobile {
