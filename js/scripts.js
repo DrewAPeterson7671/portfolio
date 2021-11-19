@@ -3,7 +3,6 @@ const hidden = ["myHome", "myExperience", "myProjects", "myReferences", "myAbout
 // Menu Link Handling
 
 function toggleView(section) {
-  console.log("toggleView ran")
   document.getElementById(section).style.display = "block";
   editHidden = hidden.filter(item => item !== section);
   editHidden.forEach( i => {
@@ -51,40 +50,37 @@ function closeNav() {
 // Responsive Changes
 
 const mobileNav = document.querySelector("#myNavbar");
-
-// function responsiveNav() {
-  //   console.log("responsiveNav ran")
-  //   mainNav.classList.toggle("activeMobile")
-  // }
   
   function mobileMenu() {
-    console.log("Click Mobile Open");
-    // mobileIcon.classList.toggle("activeMobile");
     mobileNav.classList.toggle("active-mobile");
-    console.log(mobileNav.classList)
   }
-  
-// const mobileIcon = document.querySelector(".mobile-icon");
-// mobileIcon.addEventListener("click", () => mobileMenu(), false);
 
 // Media Query Section
 
 function handleMediaChange(mediaQuery) {
   if (mediaQuery.matches) {
-    mainNav.classList.remove("active");
-    openBtn.classList.remove("activeopen");
-    closeBtn.classList.remove("activeclose")
-    mobileNav.classList.add("mobile-navbar");
+    if (mainNav.classList.contains("active")) {
+      mainNav.classList.remove("active"); 
+    }
+    if (openBtn.classList.contains("activeopen")) {
+      openBtn.classList.remove("activeopen");
+    }
+    if (openBtn.classList.contains("activeclose")) { 
+      closeBtn.classList.remove("activeclose")
+    }
+    if (openBtn.className !== "mobile-navbar") { 
+      mobileNav.classList.add("mobile-navbar");
+    }
   } else {
     // openBtn.classList.add("activeopen");
     // closeBtn.classList.remove("activeclose")
-    mobileNav.classList.remove("mobile-navbar");
+    if (openBtn.classList.contains("activeclose")) { 
+      mobileNav.classList.remove("activeclose");
+    }
   }
 
   // THESE are for reversing when back to big screen
-  // mobileIcon may not be needed
     // mainNav.classList.toggle("mobileNavbar")
-    // mobileIcon.classList.remove("activeMobile");
     // mobileNav.classList.remove("activeMobile");
 }
 
