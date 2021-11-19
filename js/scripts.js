@@ -1,8 +1,9 @@
-let hidden = ["myHome", "myExperience", "myProjects", "myReferences", "myAbout", "myContact"];
+const hidden = ["myHome", "myExperience", "myProjects", "myReferences", "myAbout", "myContact"];
 
-let menuMargin = "155px";
+// Menu Link Handling
 
 function toggleView(section) {
+  console.log("toggleView ran")
   document.getElementById(section).style.display = "block";
   editHidden = hidden.filter(item => item !== section);
   editHidden.forEach( i => {
@@ -29,82 +30,66 @@ const contact = document.getElementById("contact");
 contact.addEventListener("click", () => { toggleView("myContact"); }, false);
 
 
+// Regular Navbar Hide and Show
+
+const mainNav = document.querySelector(".navbar");
+const closeBtn = document.querySelector(".closebtn");
+const openBtn = document.querySelector(".openbtn");
+
 function openNav() {
-  document.getElementById("myNavbar").style.width = menuMargin;
-  document.getElementById("closeBtn").style.display = "block";
-  document.getElementById("openBtn").style.display = "none";
+  mainNav.classList.toggle("active")
+  closeBtn.classList.toggle("activeclose")
+  openBtn.classList.toggle("activeopen")
 }
 
 function closeNav() {
-  document.getElementById("myNavbar").style.width = "0";
-  document.getElementById("closeBtn").style.display = "none";
-  document.getElementById("openBtn").style.display = "block";
+  mainNav.classList.toggle("active")
+  closeBtn.classList.toggle("activeclose")
+  openBtn.classList.toggle("activeopen")
 }
 
-function responsiveNav() {
-  let menuStateCheck = document.getElementById("myNavbar");
-  if (menuStateCheck.style.width == "155px") {
-    closeNav();
+// Responsive Changes
+
+const mobileNav = document.querySelector("#myNavbar");
+
+// function responsiveNav() {
+  //   console.log("responsiveNav ran")
+  //   mainNav.classList.toggle("activeMobile")
+  // }
+  
+  function mobileMenu() {
+    console.log("Click Mobile Open");
+    // mobileIcon.classList.toggle("activeMobile");
+    mobileNav.classList.toggle("active-mobile");
+    console.log(mobileNav.classList)
+  }
+  
+// const mobileIcon = document.querySelector(".mobile-icon");
+// mobileIcon.addEventListener("click", () => mobileMenu(), false);
+
+// Media Query Section
+
+function handleMediaChange(mediaQuery) {
+  if (mediaQuery.matches) {
+    mainNav.classList.remove("active");
+    openBtn.classList.remove("activeopen");
+    closeBtn.classList.remove("activeclose")
+    mobileNav.classList.add("mobile-navbar");
   } else {
-    openNav();
+    // openBtn.classList.add("activeopen");
+    // closeBtn.classList.remove("activeclose")
+    mobileNav.classList.remove("mobile-navbar");
   }
+
+  // THESE are for reversing when back to big screen
+  // mobileIcon may not be needed
+    // mainNav.classList.toggle("mobileNavbar")
+    // mobileIcon.classList.remove("activeMobile");
+    // mobileNav.classList.remove("activeMobile");
 }
 
-function mediaMenu(screenWidth760) {
-  let menuStateCheck = document.getElementById("myNavbar");
-  if (screenWidth760.matches) {
-    if (menuStateCheck.style.width == "155px") {
-      closeNav();
-    }
-  }
-}
-
-let screenWidth760 = window.matchMedia("(max-width: 760px)");
-mediaMenu(screenWidth760);
-screenWidth760.addListener(mediaMenu);
-
-const mobileIcon = document.querySelector(".mobile-icon");
-const mobileNav = document.querySelector(".navbar");
-
-mobileIcon.addEventListener("click", mobileMenu);
-
-function mobileMenu() {
-  // console.log("click");
-  mobileIcon.classList.toggle("active");
-  mobileNav.classList.toggle("active");
-}
-
-// const mobileLink = document.querySelector(".navItem");
-
-// mobileLink.forEach(n => n.addEventListener("click"))
+const mediaQuery = window.matchMedia("(max-width: 768px)");
+handleMediaChange(mediaQuery);
+mediaQuery.addListener(handleMediaChange);
 
 
-// let mqls = [
-//   window.matchMedia("(max-width: 860px)"),
-//   window.matchMedia("(max-width: 600px)")
-// ]
-
-// function mediaQueryResponse(mql) {
-//   if (mqls[0].matches) {
-//     console.log("860");
-//     let menuStateCheck = document.getElementById("myNavbar");
-//     menuMargin = "105px";
-//     if (menuStateCheck.style.width == "155px") {
-//       document.getElementById("myNavbar").style.width = menuMargin;
-//     } else {
-//       menuMargin = "105px";
-
-//     }
-//     if (mqls[1].matches) {
-//       console.log("600");
-//       if (menuStateCheck.style.width == "155px") {
-//         closeNav();
-//       }
-//     }  
-//   }
-// }
-
-// for (var i = 0; i < mqls.length; i++) {
-//   mediaQueryResponse(mqls[i]);
-//   mqls[i].addListener(mediaQueryResponse)
-// }
