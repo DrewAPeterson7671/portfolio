@@ -97,8 +97,8 @@ a:hover {
 
 .navbar.active {
   width: 145px;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .navItem {
