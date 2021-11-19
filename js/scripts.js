@@ -77,8 +77,6 @@ function closeNav() {
   if (closeBtn.classList.contains("activeclose")) {
     closeBtn.classList.remove("activeclose");
   }
-  // closeBtn.classList.toggle("activeclose");
-  // openBtn.classList.toggle("activeopen");
 }
 
 // Responsive Changes
@@ -95,19 +93,6 @@ function closeMobile() {
   }
 }
 
-// This bit is not working to close menu after select I think the key is to adapt it to existing links
-
-// const mobileLink = document.querySelector(".navItem");
-
-// mobileLink.forEach(n => n.addEventListener("click", closeMenu));
-
-// function closeMenu() {
-//   mobileNav.classList.remove("active-mobile");
-// }
-
-
-
-
 // Media Query Section
 
 function handleMediaChange(mediaQuery) {
@@ -123,7 +108,6 @@ function handleMediaChange(mediaQuery) {
     }
     if (!openBtn.classList.contains("mobile-navbar")) { 
       mobileNav.classList.add("mobile-navbar");
-      // mobileLink.forEach(n => n.addEventListener("click", closeMenu));
     }
   // }
   } else {
