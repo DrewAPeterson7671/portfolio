@@ -12,7 +12,9 @@
   --color-shadow: rgba(186, 213, 247, 0.336);
 }
 
+
 /* General Formatting */
+
 
 body {
   background: var(--color-background);
@@ -90,11 +92,7 @@ a:hover {
   background-color: var(--color-background);
   overflow-x: hidden;
   padding-top: 80px;
-  /* -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out; */
 }
-
-/* Transition problem is based here in navbar.  Partially solved by moving to .navbar.active */
 
 .navbar.active {
   width: 145px;
@@ -217,13 +215,9 @@ a:hover {
   }
 }
 
-/* @media screen and (max-width: 450px) {
-  .mobile-navbar {
-    height: 37vh;
-  }
-} */
 
 /* Hide and Show sections */
+
 
 #myHome {
   display: block;
@@ -249,7 +243,9 @@ a:hover {
   display: none;
 }
 
+
 /* footer icons */
+
 
 .footer img {
   object-fit: none;
@@ -272,6 +268,7 @@ a:hover {
 
 
 /* footer */
+
 
 .footer {
   height: 12%;
@@ -300,13 +297,7 @@ a:hover {
 }
 
 
-
-
 /* Home Section */
-
-/* .home {
-  margin-bottom: 60px;
-} */
 
 
 .home img {
@@ -314,7 +305,6 @@ a:hover {
   position: static;
   transform: translateY(15%);
   margin: auto;
-  /* padding-top: 20px; */
   width: 100%;
   max-width: 975px;
 }
@@ -329,7 +319,9 @@ a:hover {
   margin: auto;
 }
 
+
 /* Experience Section */
+
 
 .experience {
   margin-bottom: 100px;
@@ -409,11 +401,9 @@ a:hover {
   }
 }
 
+
 /* Project Section */
 
-/* .projects {
-  margin-bottom: 100px;
-} */
 
 .project-card {
   margin-left: auto;
@@ -451,10 +441,11 @@ a:hover {
   margin-bottom: 10px;
 }
 
+
 /* Reference Section */
 
+
 .references {
-  /* margin-bottom: 100px; */
   width: 100%;
 }
 
@@ -479,11 +470,9 @@ a:hover {
   margin-top: -5px;
 }
 
+
 /* About Section */
 
-/* .about {
-  margin-bottom: 100px;
-} */
 
 .about-overflow {
   overflow: auto;
@@ -511,16 +500,12 @@ a:hover {
 
 /* Contact Section */
 
-/* .contact {
-  margin-bottom: 100px;
-} */
 
 .contact img {
   display: block;
   width: 100%;
-  max-width: 600px;
+  max-height: 300px;
   margin: auto;
-  /* padding-top: 10px; */
   padding-bottom: 20px;
 }
 

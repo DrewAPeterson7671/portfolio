@@ -107,7 +107,7 @@ function handleMediaChange(mediaQuery) {
     if (!openBtn.classList.contains("mobile-navbar")) { 
       mobileNav.classList.add("mobile-navbar");
     }
-  // }
+
   } else {
     if (mobileNav.classList.contains("mobile-navbar")) { 
       mobileNav.classList.remove("mobile-navbar");
