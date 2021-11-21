@@ -12,7 +12,9 @@
   --color-shadow: rgba(186, 213, 247, 0.336);
 }
 
+
 /* General Formatting */
+
 
 body {
   background: var(--color-background);
@@ -64,6 +66,7 @@ a:hover {
 }
 
 #main {
+  margin-bottom: 70px;
   margin-left: 145px;
   margin-right: 145px;
   padding: 5px 5px 5px 5px;
@@ -89,16 +92,12 @@ a:hover {
   background-color: var(--color-background);
   overflow-x: hidden;
   padding-top: 80px;
-  /* -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out; */
 }
-
-/* Transition problem is based here in navbar.  Partially solved by moving to .navbar.active */
 
 .navbar.active {
   width: 145px;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .navItem {
@@ -151,21 +150,25 @@ a:hover {
   text-shadow: 3px 3px 5px var(--color-shadow);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 812px) {
   #main {
     margin-top: 70px;
     margin-left: 5px;
     margin-right: 5px;
-    padding: 10px;
+    padding: 30px;
   }
 
-  /* .navbar {
-    -webkit-transition: none !important;
-    -moz-transition: none !important;
-    -o-transition: none !important;
-    -ms-transition: none !important;
-    transition: none !important;
-  } */
+  .home h1 {
+    font-size: 2.5rem;
+  }
+
+  .home h2 {
+    font-size: 1rem;
+  }
+  
+  .home p {
+    font-size: .5rem;
+  }
 
   .mobilebar {
     position: fixed;
@@ -185,7 +188,7 @@ a:hover {
     top: 2rem;
     background-color: var(--color-background);
     width: 100%;
-    height: 33%;
+    height: fit-content;
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 10px 27px var(--color-shadow);
@@ -194,6 +197,10 @@ a:hover {
 
   #myNavbar.active-mobile {
     left: 0;
+  }
+
+  .home {
+    padding-top: 0;
   }
  
   .closebtn {
@@ -208,7 +215,9 @@ a:hover {
   }
 }
 
+
 /* Hide and Show sections */
+
 
 #myHome {
   display: block;
@@ -234,7 +243,9 @@ a:hover {
   display: none;
 }
 
+
 /* footer icons */
+
 
 .footer img {
   object-fit: none;
@@ -257,6 +268,7 @@ a:hover {
 
 
 /* footer */
+
 
 .footer {
   height: 12%;
@@ -285,15 +297,11 @@ a:hover {
 }
 
 
-
-
 /* Home Section */
 
-.home {
-  margin-bottom: 60px;
-}
 
 .home img {
+  display: block;
   position: static;
   transform: translateY(15%);
   margin: auto;
@@ -305,13 +313,15 @@ a:hover {
   position: absolute;
   display: block;
   top: 60%;
-  bottom: 0;
+  bottom: 20%;
   left: 0;
   right: 0;
   margin: auto;
 }
 
+
 /* Experience Section */
+
 
 .experience {
   margin-bottom: 100px;
@@ -391,11 +401,9 @@ a:hover {
   }
 }
 
+
 /* Project Section */
 
-.projects {
-  margin-bottom: 100px;
-}
 
 .project-card {
   margin-left: auto;
@@ -433,10 +441,11 @@ a:hover {
   margin-bottom: 10px;
 }
 
+
 /* Reference Section */
 
+
 .references {
-  margin-bottom: 100px;
   width: 100%;
 }
 
@@ -461,11 +470,9 @@ a:hover {
   margin-top: -5px;
 }
 
+
 /* About Section */
 
-.about {
-  margin-bottom: 100px;
-}
 
 .about-overflow {
   overflow: auto;
@@ -480,7 +487,9 @@ a:hover {
 @media screen and (max-width: 890px) {
   .about img {
     float: none;
+    display: block;
     width: 100%;
+    max-width: 400px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -491,6 +500,13 @@ a:hover {
 
 /* Contact Section */
 
-.contact {
-  margin-bottom: 100px;
+
+.contact img {
+  display: block;
+  width: 100%;
+  max-height: 300px;
+  margin: auto;
+  padding-bottom: 20px;
 }
+
+

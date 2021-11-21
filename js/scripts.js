@@ -54,7 +54,6 @@ const closeBtn = document.querySelector(".closebtn");
 const openBtn = document.querySelector(".openbtn");
 
 function openNav() {
-  console.log("click");
   if (!mainNav.classList.contains("active")) {
     mainNav.classList.add("active");
   }
@@ -67,7 +66,6 @@ function openNav() {
 }
 
 function closeNav() {
-  console.log("click");
   if (mainNav.classList.contains("active")) {
     mainNav.classList.remove("active");
   }
@@ -77,8 +75,6 @@ function closeNav() {
   if (closeBtn.classList.contains("activeclose")) {
     closeBtn.classList.remove("activeclose");
   }
-  // closeBtn.classList.toggle("activeclose");
-  // openBtn.classList.toggle("activeopen");
 }
 
 // Responsive Changes
@@ -95,19 +91,6 @@ function closeMobile() {
   }
 }
 
-// This bit is not working to close menu after select I think the key is to adapt it to existing links
-
-// const mobileLink = document.querySelector(".navItem");
-
-// mobileLink.forEach(n => n.addEventListener("click", closeMenu));
-
-// function closeMenu() {
-//   mobileNav.classList.remove("active-mobile");
-// }
-
-
-
-
 // Media Query Section
 
 function handleMediaChange(mediaQuery) {
@@ -123,28 +106,17 @@ function handleMediaChange(mediaQuery) {
     }
     if (!openBtn.classList.contains("mobile-navbar")) { 
       mobileNav.classList.add("mobile-navbar");
-      // mobileLink.forEach(n => n.addEventListener("click", closeMenu));
     }
-  // }
+
   } else {
     if (mobileNav.classList.contains("mobile-navbar")) { 
       mobileNav.classList.remove("mobile-navbar");
     }
     closeMobile()
-    // if (openBtn.className !== "activeopen") { 
-    //   openBtn.classList.add("activeopen");
-    // }
-    // closeBtn.classList.remove("activeclose")
-    // if (openBtn.classList.contains("activeclose")) { 
-    //   mobileNav.classList.remove("activeclose");
   }
-
-  // THESE are for reversing when back to big screen
-    // mainNav.classList.toggle("mobileNavbar")
-    // mobileNav.classList.remove("activeMobile");
 }
 
-const mediaQuery = window.matchMedia("(max-width: 768px)");
+const mediaQuery = window.matchMedia("(max-width: 812px)");
 handleMediaChange(mediaQuery);
 mediaQuery.addListener(handleMediaChange);
 
