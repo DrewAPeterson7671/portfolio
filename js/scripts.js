@@ -54,7 +54,6 @@ const closeBtn = document.querySelector(".closebtn");
 const openBtn = document.querySelector(".openbtn");
 
 function openNav() {
-  console.log("click");
   if (!mainNav.classList.contains("active")) {
     mainNav.classList.add("active");
   }
@@ -67,7 +66,6 @@ function openNav() {
 }
 
 function closeNav() {
-  console.log("click");
   if (mainNav.classList.contains("active")) {
     mainNav.classList.remove("active");
   }
@@ -115,20 +113,10 @@ function handleMediaChange(mediaQuery) {
       mobileNav.classList.remove("mobile-navbar");
     }
     closeMobile()
-    // if (openBtn.className !== "activeopen") { 
-    //   openBtn.classList.add("activeopen");
-    // }
-    // closeBtn.classList.remove("activeclose")
-    // if (openBtn.classList.contains("activeclose")) { 
-    //   mobileNav.classList.remove("activeclose");
   }
-
-  // THESE are for reversing when back to big screen
-    // mainNav.classList.toggle("mobileNavbar")
-    // mobileNav.classList.remove("activeMobile");
 }
 
-const mediaQuery = window.matchMedia("(max-width: 768px)");
+const mediaQuery = window.matchMedia("(max-width: 812px)");
 handleMediaChange(mediaQuery);
 mediaQuery.addListener(handleMediaChange);
 
