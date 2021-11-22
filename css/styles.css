@@ -24,7 +24,7 @@ h1, h2, h3, h4 {
   color: var(--color-headers);
 }
 
-h1, h2, h3, h4, p, a {
+h1, h2, h3, h4, p, a, li {
   font-family: var(--ff-logo);
 }
 
@@ -48,7 +48,7 @@ h4 {
   font-size: .8rem;
 }
 
-p {
+p, li {
   color: var(--color-text);
 }
 
